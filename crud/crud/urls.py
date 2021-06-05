@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""crud URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -18,8 +18,8 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.EmployeeTable.as_view()),
-    path('update/<int:pk>', views.EmployeeUpdate.as_view()),
-    path('delete/<int:pk>', views.EmployeeDelete.as_view()),
-]
+    path('',views.DetailsTable.as_view()),
+    path('update/<int:pk>',views.DetailsUpdate.as_view()),
+    path('delete/<int:pk>',views.DetailsDelete.as_view()),
 
+]
